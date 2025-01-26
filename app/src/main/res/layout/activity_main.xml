@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ED115C"
+    android:padding="16dp">
+
+    <!-- Main Title Text -->
+    <TextView
+        android:id="@+id/mainTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Currency Converter: Euro ↔ DZD"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
+
+    <!-- Sub-Title Text -->
+    <TextView
+        android:id="@+id/subTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Let's Get Started!"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/mainTitle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
+
+    <!-- Form Container with White Background -->
+    <RelativeLayout
+        android:id="@+id/formContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:padding="24dp"
+        android:layout_below="@id/subTitle"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+
+        <!-- Input Field for Value to Convert -->
+        <EditText
+            android:id="@+id/inputValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter the value to convert"
+            android:inputType="numberDecimal"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:backgroundTint="#888888"
+            android:padding="12dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"/>
+
+        <!-- RadioGroup for Currency Selection (Euro to DZD or DZD to Euro) -->
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputValue"
+            android:layout_marginTop="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true">
+
+            <!-- Euro to DZD Radio Button -->
+            <RadioButton
+                android:id="@+id/rbEuroToDzd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Euro -> DZD"
+                android:textColor="#000000"/>
+
+            <!-- DZD to Euro Radio Button -->
+            <RadioButton
+                android:id="@+id/rbDzdToEuro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DZD -> Euro"
+                android:textColor="#000000"/>
+
+        </RadioGroup>
+
+        <!-- Convert Button -->
+        <Button
+            android:id="@+id/btnConvert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convert"
+            android:backgroundTint="#ED115C"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:layout_below="@id/radioGroup"
+            android:layout_marginTop="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"/>
+
+        <!-- Result TextView -->
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Result after conversion"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_below="@id/btnConvert"
+            android:layout_marginTop="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
